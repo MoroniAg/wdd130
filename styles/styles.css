@@ -1,3 +1,19 @@
+h1 {
+    color: rgba(51, 102, 153, 1);
+}
+
+nav {
+    background-color: rgba(51, 102, 153, 1);
+    padding: 16px;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 1);
+    padding: 8px 16px;
+    display: block;
+    text-decoration: none;
+}
+
 main {
     max-width: fit-content;
 }
@@ -11,14 +27,17 @@ aside {
     color: rgba(34, 34, 34, 1);
 }
 
-aside > img {
+aside img {
     width: 200px;
     height: auto;
 }
 
-main > img {
+main img {
     width: 150px;
     height: auto;
+    border: 2px solid rgba(51, 102, 153, 1);
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(51, 102, 153, 0.2);
 }
 
 p {
