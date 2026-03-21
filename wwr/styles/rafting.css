@@ -18,6 +18,10 @@ body {
     color: var(--color-text);
 }
 
+body {
+    background: var(--color-bg);
+}
+
 header,
 main,
 footer {
@@ -41,6 +45,22 @@ article {
 
 .socialmedia a {
     text-decoration: none;
+}
+
+nav a {
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 6px 8px;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--color-accent);
+}
+
+:focus {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
 }
 
 .hero {
@@ -68,6 +88,8 @@ article {
 .hero article img {
     width: 125px;
     border-radius: 6px;
+    float: right;
+    margin-left: 12px;
 }
 
 .hero article {
