@@ -9,11 +9,13 @@
     --color-accent: #F29E4C;
     --color-bg: #ffffff;
     --color-text: #12303f;
+    --color-surface: rgba(255, 255, 255, 0.95);
+    --color-on-primary: #ffffff;
 }
 
 body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--color-text);
 }
 
 header,
@@ -25,8 +27,8 @@ footer {
 
 h1,
 h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--color-primary);
 }
 
 nav,
@@ -51,19 +53,31 @@ article {
     height: auto;
 }
 
-h1 {
+.hero h1 {
     position: absolute;
     top: 20px;
+    left: 0;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff;
-    /* white text – make sure there is enough contrast with the background-color */
+    opacity: 0.9;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
 }
 
 .hero article img {
-    float: right;
     width: 125px;
+    border-radius: 6px;
+}
+
+.hero article {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 3;
+    max-width: 360px;
+    background: var(--color-surface);
+    padding: 12px;
+    border-radius: 6px;
+    color: var(--color-text);
 }
