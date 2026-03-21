@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moroni Aguilera | WDD 130</title>
+    <meta name="description" content="Contain the about of page" />
+    <meta name="author" content="Moroni Aguilera" />
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-nav">
+            <a href="index.html">
+                <img src="images/z-wwr-blue.jpg" alt="WWR Rafting logo" width="180" />
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <img src="images/rafting.jpg" alt="Happy WWR client" />
+            <h1>WWR Rafting</h1>
+            <article class="about-article">
+                <img src="images/employees.jpg" alt="Happy WWR client" width="160" />
+                <div>
+                    <p>Our mission is to provide safe, exhilarating river experiences that build
+                        confidence, connection, and lifelong memories. We guide with care, teach
+                        with
+                        patience, and celebrate every successful run — join us and feel the river.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <section>
+            <h2>History</h2>
+            <p>Founded by three river-obsessed friends, WWR began as a tiny, eager outfitter with
+                one raft and endless optimism; over the years we've grown into a close-knit team
+                guiding thousands of joyful runs while keeping safety and fun at the heart of every
+                trip.</p>
+        </section>
+        <section>
+            <h2>Adventure Awaits You!</h2>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> WWR Rafting — Moroni Aguilera</p>
+        <nav class="socialmedia">
+            <a href="https://www.facebook.example" target="_blank" rel="noopener noreferrer">
+                <img src="images/social_facebook.svg" alt="Facebook" width="36" />
+            </a>
+            <a href="https://www.instagram.example" target="_blank" rel="noopener noreferrer">
+                <img src="images/social_instagram.svg" alt="Instagram" width="36" />
+            </a>
+            <a href="https://www.tiktok.example" target="_blank" rel="noopener noreferrer">
+                <img src="images/social_tiktok.svg" alt="TikTok" width="36" />
+            </a>
+        </nav>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </footer>
+</body>
+
+</html>
