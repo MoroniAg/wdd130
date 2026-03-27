@@ -16,9 +16,6 @@
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--color-text);
-}
-
-body {
     background: var(--color-bg);
 }
 
@@ -101,7 +98,7 @@ nav a {
     margin-left: 8px;
     padding: 8px 12px;
     border-radius: 6px;
-    color: var(--color-text);
+    color: var(--color-primary);
     background: transparent;
     transition: background-color 160ms ease, color 160ms ease, transform 120ms ease;
     text-decoration: none;
@@ -149,16 +146,7 @@ article {
     text-decoration: none;
 }
 
-nav a {
-    color: var(--color-primary);
-    text-decoration: none;
-    padding: 6px 8px;
-}
-
-nav a:hover,
-nav a:focus {
-    color: var(--color-accent);
-}
+/* consolidated nav link rules above */
 
 :focus {
     outline: 3px solid var(--color-accent);
