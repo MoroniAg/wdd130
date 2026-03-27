@@ -29,6 +29,108 @@ footer {
     margin: 0 auto;
 }
 
+/* Footer layout: left copyright, right social icons */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 16px;
+    margin-top: 24px;
+    border-top: 1px solid rgba(18, 48, 63, 0.04);
+}
+
+.socialmedia {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.socialmedia img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .socialmedia {
+        justify-content: center;
+    }
+}
+
+/* Header: use CSS Grid for logo / nav layout */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 16px;
+    background: linear-gradient(90deg, rgba(11, 95, 165, 0.03), rgba(242, 158, 76, 0.01));
+    border-bottom: 1px solid rgba(18, 48, 63, 0.06);
+}
+
+/* container used in pages */
+.logo-nav {
+    display: contents;
+    /* allow header grid to position children */
+}
+
+header a img,
+.logo {
+    display: block;
+    max-height: 64px;
+    width: auto;
+}
+
+/* center nav to the right column and align items horizontally */
+nav {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: var(--color-text);
+    background: transparent;
+    transition: background-color 160ms ease, color 160ms ease, transform 120ms ease;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 12px;
+    }
+
+    nav {
+        justify-self: center;
+    }
+
+    header a img {
+        max-height: 56px;
+    }
+}
+
 h1,
 h2 {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -102,4 +204,70 @@ nav a:focus {
     padding: 12px;
     border-radius: 6px;
     color: var(--color-text);
+}
+
+/* History section two-column layout */
+.history {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 18px;
+    align-items: start;
+    margin: 8px 16px;
+}
+
+.history img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+@media (max-width: 760px) {
+    .history {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}
+
+/* Adventures gallery: five images in a single row, responsive wrap */
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin: 16px;
+    align-items: start;
+}
+
+.adventures figure {
+    margin: 0;
+    background: var(--color-surface);
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.adventures img {
+    display: block;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.adventures figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+@media (max-width: 1100px) {
+    .adventures {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .adventures {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
