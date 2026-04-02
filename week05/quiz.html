@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+
+<body>
+    <main>
+        <h1>HTML &amp; CSS Quiz</h1>
+        <form action="#" method="post" aria-labelledby="quiz-title">
+            <p id="quiz-title" hidden>HTML and CSS knowledge check</p>
+
+            <fieldset>
+                <legend>Question 1 — Fill in the blank (text input)</legend>
+                <label>Which tag is used for the main heading?
+                    <input type="text" id="q1" name="q1" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Question 2 — Short answer (textarea)</legend>
+                <label>Briefly explain the difference between margin and padding.
+                    <textarea id="q2" name="q2" rows="3" required></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Question 3 — Dropdown (select)</legend>
+                <label>Choose the correct doctype declaration:
+                    <select id="q3" name="q3" required>
+                        <option value="" selected disabled>Choose One ...</option>
+                        <option value="html5">&lt;!DOCTYPE html&gt;</option>
+                        <option value="xhtml">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+                            Transitional//EN" ""> </option>
+                        <option value="html4">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                            ""> </option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Question 4 — Number (integer answer)</legend>
+                <label>How many levels of heading exist in HTML5? (Enter an integer)
+                    <input type="number" id="q4" name="q4" min="1" max="6" required>
+                </label>
+            </fieldset>
+
+            <p>
+                <button type="submit">Submit Quiz</button>
+                <button type="reset">Reset</button>
+            </p>
+        </form>
+    </main>
+
+</body>
+
+</html>
