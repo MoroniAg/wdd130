@@ -280,8 +280,7 @@ article {
     margin: 16px;
 }
 
-.map-embed,
-.contact-form-block {
+.map-embed {
     background: var(--color-surface);
     padding: 12px;
     border-radius: 8px;
@@ -289,6 +288,13 @@ article {
 
 .map-embed {
     flex: 1 1 55%;
+}
+
+.map-embed iframe {
+    border: 0;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .contact-form-block {

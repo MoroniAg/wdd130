@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — WWR Rafting</title>
+    <title>Contact Us and the rafting Ecuador</title>
     <meta name="description"
       content="Contact Rafting - Get in touch with us for inquiries, support, or partnership opportunities; we aim to respond within 2 business days." />
     <meta name="author" content="Moroni Aguilera" />
@@ -55,8 +55,7 @@
                     <h2>Find Us</h2>
                     <iframe title="WWR Rafting location"
                       src="https://www.google.com/maps?q=Av.+Malec%C3%B3n+2500+Ba%C3%B1os+de+Agua+Santa+Tungurahua+Ecuador&output=embed"
-                      width="600" height="300" style="border:0; max-width:100%;" allowfullscreen=""
-                      loading="lazy"></iframe>
+                      width="600" height="300" allowfullscreen loading="lazy"></iframe>
                 </div>
 
                 <div class="contact-form-block">
@@ -70,27 +69,28 @@
 
                         <fieldset>
                             <legend>Purpose of message</legend>
-                            <label><input type="radio" name="purpose" value="general" required>
-                                General
-                                Inquiry</label>
-                            <label><input type="radio" name="purpose" value="reservation">
-                                Reservation
-                                Question</label>
-                            <label><input type="radio" name="purpose" value="suggestion"> Website
-                                Suggestion</label>
+                            <input type="radio" id="purpose-general" name="purpose" value="general"
+                              required>
+                            <label for="purpose-general">General Inquiry</label>
+                            <input type="radio" id="purpose-reservation" name="purpose"
+                              value="reservation">
+                            <label for="purpose-reservation">Reservation Question</label>
+                            <input type="radio" id="purpose-suggestion" name="purpose"
+                              value="suggestion">
+                            <label for="purpose-suggestion">Website Suggestion</label>
                         </fieldset>
 
                         <label for="user-message">Message</label>
                         <textarea id="user-message" name="message" rows="6" required></textarea>
 
-                        <label class="subscribe"><input type="checkbox" name="subscribe"> Please
-                            subscribe me to the monthly newsletter</label>
+                        <input type="checkbox" id="subscribe" name="subscribe">
+                        <label class="subscribe" for="subscribe">Please subscribe me to the monthly
+                            newsletter</label>
 
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
 
-            </div>
             </div>
 
             <div class="team-profiles">
