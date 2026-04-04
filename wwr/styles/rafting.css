@@ -346,11 +346,11 @@ article {
 
 .profiles figcaption {
     width: 100%;
-    background: rgba(11, 95, 165, 0.04);
+    background: var(--color-primary);
     padding: 10px 8px;
     border-radius: 8px;
     font-weight: 700;
-    color: var(--color-text);
+    color: var(--color-on-primary);
 }
 
 @media (max-width: 760px) {
