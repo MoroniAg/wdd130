@@ -26,7 +26,6 @@ footer {
     margin: 0 auto;
 }
 
-/* Footer layout: left copyright, right social icons */
 footer {
     display: flex;
     align-items: center;
@@ -72,10 +71,8 @@ header {
     border-bottom: 1px solid rgba(18, 48, 63, 0.06);
 }
 
-/* container used in pages */
 .logo-nav {
     display: contents;
-    /* allow header grid to position children */
 }
 
 header a img,
@@ -85,7 +82,6 @@ header a img,
     width: auto;
 }
 
-/* center nav to the right column and align items horizontally */
 nav {
     justify-self: end;
     display: flex;
@@ -194,7 +190,6 @@ article {
     color: var(--color-text);
 }
 
-/* History section two-column layout */
 .history {
     display: grid;
     grid-template-columns: 220px 1fr;
@@ -217,7 +212,6 @@ article {
     }
 }
 
-/* Adventures gallery: five images in a single row, responsive wrap */
 .adventures {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -258,4 +252,190 @@ article {
     .adventures {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.company-info {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: var(--color-surface);
+    padding: 20px 0;
+}
+
+.company-info > * {
+    max-width: 840px;
+    /* keep content aligned with page container */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 16px;
+}
+
+.map-embed,
+.contact-form-block {
+    background: var(--color-surface);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.map-embed {
+    flex: 1 1 55%;
+}
+
+.contact-form-block {
+    flex: 1 1 40%;
+}
+
+@media (max-width: 900px) {
+    .contact-row {
+        flex-direction: column;
+    }
+}
+
+/* Team profiles: breakout full width and distribute three boxes with space-between */
+.team-profiles {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: transparent;
+    padding: 18px 0 28px;
+}
+
+.team-profiles > * {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.profiles {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.profiles figure {
+    flex: 1 1 0;
+    background: var(--color-surface);
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profiles img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.profiles figcaption {
+    width: 100%;
+    background: rgba(11, 95, 165, 0.04);
+    padding: 10px 8px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+@media (max-width: 760px) {
+    .profiles {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* Enhanced styling for the contact form block */
+.contact-form-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 22px;
+    background: linear-gradient(180deg, rgba(11, 95, 165, 0.04), rgba(242, 158, 76, 0.03));
+    border: 1px solid rgba(11, 95, 165, 0.08);
+    box-shadow: 0 8px 20px rgba(18, 48, 63, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+}
+
+.contact-form-block label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.contact-form-block input[type="text"],
+.contact-form-block input[type="email"],
+.contact-form-block textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(18, 48, 63, 0.08);
+    border-radius: 8px;
+    background: #fff;
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+
+.contact-form-block fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Stack radio options vertically and style nicely */
+.contact-form-block fieldset label {
+    display: block;
+    margin: 8px 0;
+    padding: 6px 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form-block fieldset input[type="radio"] {
+    margin-right: 8px;
+    transform: translateY(1px);
+}
+
+.contact-form-block fieldset legend {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.contact-form-block .subscribe {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.contact-form-block button[type="submit"] {
+    margin-top: 6px;
+    padding: 10px 14px;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.contact-form-block button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(11, 95, 165, 0.12);
 }
