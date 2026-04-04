@@ -281,13 +281,10 @@ article {
 }
 
 .map-embed {
+    flex: 1 1 55%;
     background: var(--color-surface);
     padding: 12px;
     border-radius: 8px;
-}
-
-.map-embed {
-    flex: 1 1 55%;
 }
 
 .map-embed iframe {
@@ -295,10 +292,6 @@ article {
     max-width: 100%;
     width: 100%;
     height: auto;
-}
-
-.contact-form-block {
-    flex: 1 1 40%;
 }
 
 @media (max-width: 900px) {
