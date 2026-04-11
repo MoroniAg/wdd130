@@ -438,3 +438,423 @@ article {
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(11, 95, 165, 0.12);
 }
+
+.hero > form {
+    position: absolute;
+    left: 50%;
+    bottom: 6%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    background: var(--color-surface);
+    padding: 0.6rem;
+    border-radius: 8px;
+    align-items: center;
+    z-index: 3;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero > form label {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.hero > form input[type="text"],
+.hero > form input[type="email"] {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.hero > form button {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    padding: 0.55rem 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.hero > form button:hover {
+    background: #095a9f;
+}
+
+@media (max-width: 560px) {
+    .hero > form {
+        position: static;
+        transform: none;
+        margin: 12px auto 0;
+        width: calc(100% - 32px);
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .hero > form input[type="text"],
+    .hero > form input[type="email"],
+    .hero > form button {
+        width: 100%;
+    }
+}
+
+.content {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0;
+    padding: 0 16px;
+}
+
+.content > section {
+    width: 100%;
+    max-width: none;
+    background: var(--color-surface);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(18, 48, 63, 0.04);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "title title"
+        "col-a col-b";
+    gap: 20px;
+    align-items: start;
+}
+
+.content > section h2 {
+    margin-top: 0;
+    grid-area: title;
+}
+
+.content > section > div {
+    display: block;
+}
+
+.content > section > div:nth-of-type(1) {
+    grid-area: col-a;
+}
+
+.content > section > div:nth-of-type(2) {
+    grid-area: col-b;
+}
+
+.content > section img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.content > section a {
+    display: inline-block;
+    margin-top: 8px;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.content > section a:hover {
+    background: #095a9f;
+}
+
+@media (max-width: 880px) {
+    .content {
+        padding: 0 12px;
+    }
+
+    .content > section {
+        display: block;
+    }
+
+    .content > section > div {
+        display: block;
+    }
+
+    .content > section img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.title {
+    max-width: 1100px;
+    margin: 18px auto;
+    padding: 22px 18px;
+    background: linear-gradient(180deg, rgba(11, 95, 165, 0.04), rgba(242, 158, 76, 0.02));
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(18, 48, 63, 0.04);
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+.title p {
+    color: rgba(18, 48, 63, 0.85);
+    font-size: 1rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .title {
+        padding: 16px 12px;
+    }
+
+    .title h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Link / contact callout used on trips.html */
+.link-contactus {
+    max-width: 1100px;
+    margin: 12px auto;
+    padding: 14px 18px;
+    background: linear-gradient(90deg, rgba(242, 158, 76, 0.06), rgba(11, 95, 165, 0.02));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    box-shadow: 0 6px 18px rgba(18, 48, 63, 0.03);
+}
+
+.link-contactus p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.link-contactus a {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.link-contactus a:hover {
+    background: #095a9f;
+}
+
+@media (max-width: 720px) {
+    .link-contactus {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link-contactus a {
+        width: 100%;
+    }
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 0 16px;
+    max-width: 1200px;
+    margin: 12px auto;
+    background: linear-gradient(90deg, rgba(242, 158, 76, 0.06), rgba(11, 95, 165, 0.02));
+    box-shadow: 0 6px 18px rgba(18, 48, 63, 0.03);
+}
+
+.info > section {
+    /* featured trips column */
+}
+
+.info aside {
+    /* summary column styling */
+    background: var(--color-surface);
+    padding: 18px 18px 12px 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(18, 48, 63, 0.03);
+    margin-top: 6px;
+    margin-right: 16px;
+}
+
+.info > div article,
+.info > section article {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 250, 250, 0.85));
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(18, 48, 63, 0.06);
+    border: 1px solid rgba(18, 48, 63, 0.04);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.info > div article img,
+.info > section article img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Inner article content: 3-row layout
+   Row1: h3 full width
+   Row2: p (left) + img (right)
+   Row3: ul + CTA (stacked) */
+.info > div article > div {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "h3 h3"
+        "p img"
+        "meta link"
+        ". link";
+    gap: 10px 14px;
+    align-items: start;
+}
+
+.info > div article > div > h3 {
+    grid-area: h3;
+    margin: 0;
+}
+
+.info > div article > div .media-row {
+    display: contents;
+}
+
+.info > div article > div .media-row p {
+    grid-area: p;
+    margin: 0;
+}
+
+.info > div article > div .media-row img {
+    grid-area: img;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.info > div article > div ul {
+    grid-area: meta;
+    margin: 0.25rem 0 0 1rem;
+}
+
+.info > div article > div a {
+    grid-area: link;
+    display: inline-block;
+    margin-top: 8px;
+    justify-self: end;
+}
+
+@media (max-width: 680px) {
+    .info > div article > div {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "h3"
+            "p"
+            "img"
+            "meta"
+            "link";
+    }
+
+    .info > div article > div .media-row img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.info > div article:hover,
+.info > section article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(18, 48, 63, 0.12);
+}
+
+.info > div article h3,
+.info > section article h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.05rem;
+    color: #0b4f85;
+}
+
+.info > div article p {
+    margin: 0 0 6px 0;
+    color: rgba(18, 48, 63, 0.85);
+    font-size: 0.95rem;
+}
+
+.info > div article ul {
+    margin: 6px 0 0 1rem;
+    font-size: 0.9rem;
+}
+
+.info > div article a {
+    display: inline-block;
+    margin-top: 8px;
+    background: var(--color-accent);
+    color: #12303f;
+    padding: 8px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.info > div article a:hover {
+    filter: brightness(0.95);
+}
+
+/* Additional .info refinements: headings, table, CTAs */
+.info h2 {
+    margin-top: 0;
+    color: var(--color-primary);
+}
+
+.info ul {
+    margin: 8px 0 0 1rem;
+}
+
+.info table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.info table th,
+.info table td {
+    padding: 8px;
+    border-bottom: 1px solid rgba(18, 48, 63, 0.06);
+    text-align: left;
+}
+
+.info table caption {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.info aside a {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+@media (max-width: 880px) {
+    .info {
+        grid-template-columns: 1fr;
+        padding: 0 12px;
+    }
+
+    .info article {
+        grid-template-columns: 1fr;
+    }
+}
