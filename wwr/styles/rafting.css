@@ -151,12 +151,23 @@ article {
 
 .hero {
     position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: transparent;
 }
 
 .hero img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.hero > :not(img) {
+    max-width: 840px;
+    margin: 0 auto;
 }
 
 .hero h1 {
@@ -672,10 +683,6 @@ article {
     margin: 12px auto;
     background: linear-gradient(90deg, rgba(242, 158, 76, 0.06), rgba(11, 95, 165, 0.02));
     box-shadow: 0 6px 18px rgba(18, 48, 63, 0.03);
-}
-
-.info > section {
-    /* featured trips column */
 }
 
 .info aside {
